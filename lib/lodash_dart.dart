@@ -1,7 +1,7 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library;
+library lodash_dart;
 
 export 'src/lodash_dart_base.dart';
 
