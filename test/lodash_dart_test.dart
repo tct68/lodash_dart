@@ -9,6 +9,11 @@ void main() {
       }
     };
 
+    test('test name', () {
+      final value = map['A'];
+      print(value);
+    });
+
     test('First Test', () {
       expect(
           map.get('A'),
@@ -24,9 +29,16 @@ void main() {
     test('First Test', () {
       expect(map.get<int>('A.B.C'), equals(3));
     });
+  });
 
-    test('First Test', () {
-      expect(() => map.get<String>('A.B.C'), throwsA(TypeMatcher<Exception>()));
+  group('Set Map', () {
+     Map map = {};
+    map.set('A.B.C.D.E', 3333);
+    // map = MapUtils.create(map, 'A.B.C.D.E'.split('.'), 3333);
+
+    test('A.B.C.D.E', () {
+      final value = map.get('A.B.C.D.E');
+      expect(value, equals(3333));
     });
   });
 }
