@@ -1,17 +1,20 @@
 extension ListEx on List {
-  T first<T>() {
-    if (length == 0) {
+  T at<T>(int index) {
+    if (index >= length || index < 0) {
       return null as T;
     }
 
-    return this[0];
+    return this[index] as T;
   }
+}
 
-  T last<T>() {
-    if (length == 0) {
-      return null as T;
+extension ListDynamicEx on List<dynamic> {
+  String stringAt(int index) {
+    if (index >= length || index < 0) {
+      return "";
     }
 
-    return this[length - 1];
+    final String at = this[index];
+    return at;
   }
 }
