@@ -1,3 +1,5 @@
-logInfo(dynamic info) {
-  print(info);
+class DevUtils {
+  static logInfo(dynamic info) {
+    print(info);
+  }
 }
