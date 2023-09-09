@@ -5,3 +5,4 @@ export './extensions/object.dart';
 
 export './utils/map.dart';
 export './utils/string.dart';
+export './utils/dev.dart';
