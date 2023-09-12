@@ -1,3 +1,7 @@
+import 'package:json_annotation/json_annotation.dart';
+part 'network.g.dart';
+
+@JsonSerializable()
 class Network {
   String name;
   String? logo;
@@ -37,4 +41,7 @@ class Network {
       required this.multiSendCall,
       this.ensRegistryWithFallback,
       this.visible = true});
+
+  factory Network.fromJson(Map<String, dynamic> json) => _$NetworkFromJson(json);
+  Map<String, dynamic> toJson() => _$NetworkToJson(this);
 }

@@ -1,4 +1,3 @@
-import 'package:lodash_dart/src/extensions/object.dart';
 
 import 'network.dart';
 
@@ -18,5 +17,6 @@ void main() {
       entrypoint: "entrypoint",
       logo: "ssssss",
       multiSendCall: "multiSendCall");
-  print(network.toJson());
+
+      network.toJson();
 }
